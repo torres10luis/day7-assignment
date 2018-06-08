@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-
 interface Fighter {
   name: string;
-  points: number;
+  number1?: number;
+  // question mark ? is consider optional for the export fighter
+  returnNum?(): any;
 }
 
 @Component({
@@ -15,8 +16,11 @@ export class AppComponent implements OnInit {
   title = 'app';
 
 
-  fighter1 = this.fighter1 = new Fighter();
+  fighter1: Fighter = {name: 'jonh', number1: 10 };
+  fighter2: Fighter = {name: 'juan', returnNum: () => { return: (34); } };
 
   ngOnInit() {
+    console.log(this.fighter1, this.fighter2, this.fighter2.returnNum);
   }
-}
+
+  }
