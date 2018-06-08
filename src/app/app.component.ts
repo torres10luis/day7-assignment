@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   ford: CarBrand = new CarBrand('Ford');
-  honda: CarBrand = new CarBrand('Honda');
+  honda: Car = new Car ('Honda', 'accord', 2018);
 
   ngOnInit() {
     console.log(this.ford);
